@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(125, 198, 15);
+}
+
+.parrent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(11, 67, 3);
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+
+}
+
+.btns {
+    margin-top: 50px;
+}
+
+.Rbtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.btn {
+    background-color: rgb(21, 208, 21);
+    color: aliceblue;
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid black;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+h1 {
+    padding: 2px 30px;
+    background: white;
+    font-size: 40px;
+}
+
+.inputarea {
+    position: absolute;
+    bottom: 10px
+}
+
+.inp {
+    padding: 10px;
+}
+
+.btninp {
+    padding: 10px;
+}
+
+.modal {
+    border-radius: 20px;
+    position: absolute;
+    background: aliceblue;
+    width: 240px;
+    height: 100px;
+    display: none;
+}
+
+.active{
+    display: block;
+}
+h4 {
+    padding: 5px;
+
+    border-radius: 20px 20px 0 0;
+    background: red;
+    color: aliceblue;
+    font-size: small;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-self: center;
+    gap: 40px;
+}
+
+.buttons button {
+    margin-top: 20px;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+.on {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.391);
+}
+
+.btnN {
+    border: 2px solid rgb(56, 56, 214);
+}
