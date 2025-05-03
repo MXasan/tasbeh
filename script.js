@@ -1,6 +1,7 @@
 "use strict"
 
 let currentValue = 0
+let inputValue = 0
 const btn = document.querySelector(".btn"),
     valueO = document.querySelector("#counter"),
     Rbtn = document.querySelector(".Rbtn"),
@@ -9,7 +10,8 @@ const btn = document.querySelector(".btn"),
     btnY = document.querySelector(".btnY"),
     btnN = document.querySelector(".btnN"),
     bgmodal = document.querySelector(".bgmodal"),
-    modal = document.querySelector(".modal")
+    modal = document.querySelector(".modal"),
+    counter = document.querySelector("#counter")
 
 
 
@@ -17,7 +19,7 @@ const saved = localStorage.getItem('counter');
 function loadValue() {
     const saved = localStorage.getItem('counter');
     currentValue = saved ? parseInt(saved) : 0;
-    document.getElementById('counter').innerText = currentValue;
+    counter.innerText = currentValue
 }
 
 
@@ -28,11 +30,10 @@ btn.addEventListener("click", () => {
 })
 
 btnInp.addEventListener("click", () => {
-
-    console.log(input.value)
-    currentValue = +input.value
-    valueO.innerText = currentValue;
-    localStorage.setItem('counter', currentValue);
+    inputValue = +input.value + currentValue;
+    valueO.innerText = inputValue;
+    localStorage.setItem('counter', inputValue);
+    currentValue = inputValue
 })
 
 Rbtn.addEventListener("click", () => {
@@ -44,7 +45,6 @@ btnN.addEventListener("click", () => {
     bgmodal.classList.toggle("on")
     modal.classList.remove("active")
 })
-
 btnY.addEventListener("click", () => {
     bgmodal.classList.toggle("on")
     modal.classList.remove("active")
@@ -53,10 +53,4 @@ btnY.addEventListener("click", () => {
     localStorage.setItem('counter', currentValue);
 })
 
-
-function congrutalation(){
-    let value = input.value
-
-    console.log(value)
-}
 loadValue()
